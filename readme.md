@@ -13,6 +13,7 @@ navigate into the directory, wher the application is installed
 Create docker container using the following command:
 
 ```docker build --tag my-app .```
+
 now run it on local machine using the following command
 
 ```docker run --name python-app -p 5000:5000 my-app```
