@@ -27,3 +27,35 @@ Export of the images to local directory where *python4nas* is name of exported i
 if a linux version is required ensure the following command line is executed under administrators privileges 
 
 ```Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux```
+
+## Publlish container using DockerHub
+
+this assumes that you have user account and is setup with docker locally
+
+run commands:
+
+### Login into docker repository
+
+use the following command to login into the docker hub
+
+```docker login```
+
+### Commit the docker image locally
+
+```docker commit my-app```
+
+### Tag the container
+
+```docker tag {containerName} {userName}/{repository}```
+
+### Example of tagging repository
+
+```docker tag 3ccf69ce1d7f cpodesign/test```
+
+### upload container to the docker
+
+```docker push {userName}/{respository}```
+
+Example:
+
+```docker push cpodesign/test```
