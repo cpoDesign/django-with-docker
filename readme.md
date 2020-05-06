@@ -59,3 +59,17 @@ use the following command to login into the docker hub
 Example:
 
 ```docker push cpodesign/test```
+
+## Cleaning working station
+
+Stop all containers
+```docker stop $(docker ps -a -q)```
+
+Force stop all containers
+```docker kill $(docker ps -a -q) --force```
+
+Clean containers
+```docker rm $(docker ps -a -q)```
+
+Force remove all images
+```docker rmi $(docker images -q) --force``
